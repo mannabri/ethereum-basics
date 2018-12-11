@@ -1,6 +1,7 @@
 ### Start
-Have a look in the `contracts` folder and follow the instructions in each
-smart contract to complete the code.
+Have a look at the `contracts` folder. Each smart contract has comments
+starting with `// (!) ... ` that explain what the code should do. The following
+`/* ... */` show you where you have to implement something.  
 
 **Happy coding!**
 
