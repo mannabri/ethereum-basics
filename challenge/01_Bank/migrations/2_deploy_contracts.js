@@ -1,5 +1,5 @@
-var Bank = artifacts.require("./Bank.sol");
+var SimpleBank = artifacts.require("./SimpleBank.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Bank);
+  deployer.deploy(SimpleBank);
 };
