@@ -25,10 +25,10 @@ contract OpenBank {
 
     function withdraw(uint _amount) public {
         /*
-        (!) Prevent someone from withdrawing more than he/she previoulsy
+            (!) Prevent someone from withdrawing more than he/she previoulsy
             deposited in the bank. Check the customers mapping whether enough
             ether are available and revert the transaction if not.
-        (!) Decrease the account balance of the sender in the customers mapping
+            (!) Decrease the account balance of the sender in the customers mapping
         */
 
         /* ... */
