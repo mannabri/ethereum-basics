@@ -1,8 +1,10 @@
 pragma solidity ^0.4.2;
 
 /*
-    This bank is open for everyone to deposit funds. Unlike the SimpleBank,
-    a customer can only withdraw as much as he/she put into the bank beforehand.
+    Let's improve our bank to overcome its security issue. This time, each
+    customer has an own account balance that is mapped to the customer address.
+    In this way a customer can only deposit ether into his account, and
+    withdraw from his account. NO MORE STEALING!!! 
 */
 
 contract OpenBank {
