@@ -31,6 +31,8 @@ contract('SimpleBank', async (accounts) => {
         );
     });
 
+    // ---------------------------- ERRORS ------------------------------------
+
     it('should throw an error for withdrawing too much ether', async () => {
         let bank = await SimpleBank.deployed();
         try {
@@ -46,17 +48,5 @@ contract('SimpleBank', async (accounts) => {
             return true;
         }
         assert.isUndefined(receipt, 'the receipt should be undefined');
-    });
-});
-
-// ----------------------------------------------------------------------------
-
-contract('SimpleBank using then() style', function(accounts) {
-    it('should deposit 2 ether into the bank', function() {
-        return SimpleBank.deployed().then(function(instance) {
-            return web3.eth.getBalance(instance.address);
-        }).then(function(balance) {
-            assert.equal(balance.toNumber(), 0, 'bank balance is not 0');
-        });
     });
 });

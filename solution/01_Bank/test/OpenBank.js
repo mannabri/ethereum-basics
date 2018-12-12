@@ -26,6 +26,8 @@ contract('OpenBank', async (accounts) => {
         );
     });
 
+    // ---------------------------- ERRORS ------------------------------------
+
     it('should throw an error for withdrawing too much ether', async () => {
         let bank = await OpenBank.deployed();
         try {
