@@ -1,8 +1,10 @@
 pragma solidity ^0.4.2;
 
 /*
-    This is a very simple bank. Everyone is allowed to deposit ether into
-    the bank. Everyone is allowed to withdraw available ether from the bank.
+    To begin with we implement a simple bank that is open to everyone. If offers
+    one balance where everyone is able to deposit or withdraw ether. As you
+    can imagine this is not a very reliable bank, someone could steal all of
+    the ether. Anyway, we can improve that later ...
 */
 
 contract SimpleBank {
