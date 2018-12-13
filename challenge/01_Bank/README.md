@@ -1,11 +1,10 @@
 ### Start
 
 This challenge has 3 contracts: `SimpleBank, OpenBank, PrivateBank`.
-Go through it in this order, each contract builds on top of the previous. 
+Go through it in this order, each contract builds on top of the previous.
 
-Go ahead and switch to the `contracts` folder. Each smart contract has comments
-starting with `// (!) ... ` that explain what the code should do. The following
-`/* ... */` show you where you have to implement something.  
+In each smart contract you will find comments starting with `// (!) ... ` that
+explain what you have to implement and the  `/* ... */` indicates where.
 
 ### Testing
 Make sure you are connected to the local Ganache network at
