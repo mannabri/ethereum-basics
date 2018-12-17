@@ -1,7 +1,7 @@
 pragma solidity ^0.4.2;
 
 /*
-    todo
+    TODO: add description
     // random number: https://www.youtube.com/watch?v=dq-gBPvDgrc&list=PLV1JDFUtrXpFh85G-Ddyy2kLSafaB9biQ&index=10
 */
 
@@ -11,10 +11,10 @@ contract Coinflip {
     address public player2;
 
     uint public amount;
+    
     uint public seedBlockNumber;
-    uint256 public blockHash;
-    uint256 public FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
-    uint256 public result;
+    uint public blockHash;
+    uint public FACTOR = (2 ** 256) / 2;
 
     function makeBet() public payable {
         require(msg.value >= 0);
@@ -30,9 +30,9 @@ contract Coinflip {
 
     function resolveBet() public payable {
         amount = 0;
-        blockHash = uint256(block.blockhash(seedBlockNumber));
-        result = blockHash / FACTOR;
-        if (result == 0) {
+        blockHash = uint(blockhash(seedBlockNumber));
+        uint _result = blockHash / FACTOR;
+        if (_result == 0) {
             player1.transfer(address(this).balance);
         }
         else {
