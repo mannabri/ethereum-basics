@@ -12,9 +12,9 @@ pragma solidity ^0.4.2;
     We can parse this hash into an unsigned integer with 256 bits and there
     it is: the random block value between 0 and (2^256 - 1). But what if I only
     want randomness between 0 and 1? Well, divide the random block value by
-    half of the maximum possible block value ((2^256 - 1) / 2) and parse it to
-    uint. The result will be 0 for all block values that are below half, and 1
-    for all block values that are above half.
+    half of the maximum possible block value ((2^256 - 1) / 2). The result
+    will be 0 for all block values that are below half, and 1 for all block
+    values that are above half.
 
     You can apply this for any distribution, e.g. divide by 17 for random
     numbers between 0 and 16.
